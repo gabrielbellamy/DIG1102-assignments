@@ -31,6 +31,7 @@ When you're done editing this file, save it, commit it, and push it to your "ass
 
 ## Now get to it!
 
+<<<<<<< HEAD
 * [Arrow functions](http://babeljs.io/docs/learn-es2015/#arrows): `<C onPress={() => this.setState({pressed: true})}`
 * Function
 * [Call spread](http://babeljs.io/docs/learn-es2015/#default-rest-spread): `Math.max(...array);`
@@ -65,3 +66,5 @@ if [ "$cygwin" = "false" -a "$darwin" = "false" ] ; then
     GRADLE_OPTS="$GRADLE_OPTS \"-Xdock:name=$APP_NAME\" \"-Xdock:icon=$APP_HOME/media/gradle.icns\""
     //Constants
     //Variable
+=======
+>>>>>>> 9e92999c44d0709b154cd0ebf865ab26e45ac37e
