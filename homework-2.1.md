@@ -1,70 +1,64 @@
-# Homework 2.1 - Ever wonder what all these signs say?
+// Code taken from Animations.md in forked project "react-native" //
 
-For Homework 1.1, you found a nice project on Github, forked it into your own account, and cloned it into your Cloud 9 IDE account. For this assignment, pick one or more Javascript files from your project (you DID pick a Javascript project, didn't you?) and identify some of the following items of Javascript grammar and vocabulary that we talked about in class, including but not limited to:
+* `spring`: Simple single-spring physics model that matches [Origami](https://facebook.github.io/origami/).
+ * `friction`: Controls "bounciness"/overshoot.  Default 7.
+ * `tension`: Controls speed.  Default 40.
+* `decay`: Starts with an initial velocity and gradually slows to a stop.
+ * `velocity`: Initial velocity.  Required.
+ * `deceleration`: Rate of decay.  Default 0.997.
+ * 
+ //String vales //
 
-* Variables: `$name`
-* Constants: `E_USER_WARNING`, `MY_AWESOME_CONSTANT`
-* Arithmetic operators: addition (+), subtraction (-)
-* Functions: `array_slice()`, `do_something_amazing()`
+var App = React.createClass({
+  componentWillMount() {
+    // Animate creation
+    LayoutAnimation.spring();
+    
+    var tweenState = require('react-tween-state');
 
-When you find one, identify the file and line number in this file, below the instrcutions per the example below. Try to make the indentation match the original file (yes, copy and paste), even if that means there's NO indentation. Crazy Javascript-ers.
+var App = React.createClass({
+  mixins: [tweenState.Mixin],
+  
+// Examples of Variables //
 
-You don't have to identify EVERYTHING in a given line or even in a single file, but you may get extra points if you're thorough or make a survey of more than one file... And you might get docked if you make too much work for me. I at least want to see about 50 lines of code.
+By default, if one animation is stopped or interrupted, then all other
+animations in the group are also stopped.  Parallel has a `stopTogether` option
+that can be set to `false` to disable this.
 
-When you're done editing this file, save it, commit it, and push it to your "assignments" repo, called "origin". You remember how to push, right?
+// example of a boolean //
 
-## Your work should look like this...
+  inputRange: [0, 1],
+  outputRange: [0, 100],
+  
+  Which would map like so:
 
-`path/to/file.js:3`
-```javascript
-    if ( true )
-    // Boolean: true
-```
+Input | Output
+------|-------
+  -400|    450
+  -300|    300
+  -200|    150
+  -100|      0
+   -50|    0.5
+     0|      1
+    50|    0.5
+   100|      0
+   101|      0
+   200|      0
+   
+// Examples of arrays ...listing items in a container like manner //
 
-`path/to/file.js:42`
-```javascript
-    var name = do_something_amazing() + 1;
-    // Variable: name
-    // Function: do_something_amazing()
-    // Integer: 1
-```
+getInitialState() {
+    return { opacity: 1 }
+  },
+  
+    return (
+      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <TouchableWithoutFeedback onPress={this._animateOpacity}>
+          <View ref={component => this._box = component}
+                style={{width: 200, height: 200, backgroundColor: 'red',
+                        opacity: this.getTweeningValue('opacity')}} />
+                        
+// examples of statements and declerations use of "return", "this", //
 
-## Now get to it!
-
-<<<<<<< HEAD
-* [Arrow functions](http://babeljs.io/docs/learn-es2015/#arrows): `<C onPress={() => this.setState({pressed: true})}`
-* Function
-* [Call spread](http://babeljs.io/docs/learn-es2015/#default-rest-spread): `Math.max(...array);`
-* functions
-* [Classes](http://babeljs.io/docs/learn-es2015/#classes): `class C extends React.Component { render() { return <View />; } }`
-* functions
-* [Destructuring](http://babeljs.io/docs/learn-es2015/#destructuring): `var {isActive, style} = this.props;`
-* Variable
-* [Computed Properties](http://babeljs.io/docs/learn-es2015/#enhanced-object-literals): `var key = 'abc'; var obj = {[key]: 10};`
-* Variable
-* Object Consise Method: `var obj = { method() { return 10; } };`
-* Variable
-* [Object Short Notation](http://babeljs.io/docs/learn-es2015/#enhanced-object-literals): `var name = 'vjeux'; var obj = { name };`
-* Variable
-* [Rest Params](https://github.com/sebmarkbage/ecmascript-rest-spread): `function(type, ...args) { }`
-* Function
-* [Template Literals](http://babeljs.io/docs/learn-es2015/#template-strings): ``var who = 'world'; var str = `Hello ${who}`;``
-Variable
-
-if [ -z "$1" ]
-  then
-    echo "You must supply an OS version as the first arg, e.g. 8.1"
-Variable
-if [ "$cygwin" = "false" -a "$darwin" = "false" ] ; then
-    MAX_FD_LIMIT=`ulimit -H -n`
-    if [ $? -eq 0 ] ; then
-        if [ "$MAX_FD" = "maximum" -o "$MAX_FD" = "max" ] ; then
-            MAX_FD="$MAX_FD_LIMIT"
- //Boolean
- //Variable
- if $darwin; then
-    GRADLE_OPTS="$GRADLE_OPTS \"-Xdock:name=$APP_NAME\" \"-Xdock:icon=$APP_HOME/media/gradle.icns\""
-    //Constants
-    //Variable
-=======
->>>>>>> 9e92999c44d0709b154cd0ebf865ab26e45ac37e
+  
+  
