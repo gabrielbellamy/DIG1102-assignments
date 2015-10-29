@@ -1,20 +1,30 @@
+
+
 Code pulled from react-native FOLDER EXAMPLES and GAME BOARD JS file
 
 Tile.prototype.isNew = function () {
   return this.oldRow === -1 && !this.mergedInto;
  // prototype is new perform function show old intro then make merge into new intro // 
+ 
+ 
   Tile.prototype.fromRow = function () {
   return this.mergedInto ? this.row : this.oldRow;
 };
 // take prototype is certain row and perform function merges rows into a merged intro //
+
+
 Tile.prototype.fromColumn = function () {
   return this.mergedInto ? this.column : this.oldColumn;
 };
 // take prototype from column that is a certain function //
+
+
 Tile.prototype.toRow = function () {
   return this.mergedInto ? this.mergedInto.row : this.row;
 };
 // perform prototype toRow function then return to merge intro //
+
+
 Tile.prototype.toColumn = function () {
   return this.mergedInto ? this.mergedInto.column : this.column;
 };
