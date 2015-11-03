@@ -1,5 +1,5 @@
  // This code is taken from forked project REACT-NATIVE the folder its under is NAVIGATOR and the file name is BREADCRUMBNAVsample
- 
+ // LINK   https://github.com/gabrielbellamy/react-native/blob/master/Examples/UIExplorer/Navigator/BreadcrumbNavSample.js 
  
 
       rightContentForRoute: function(route, navigator) {
