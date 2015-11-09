@@ -8,7 +8,7 @@
       
 // This funtion appears to be called Right Content for Route its arguments are ROUTE & NAVIGATOR 
 
-// The scope variable is "return" 
+// The scope variable is "return" ***Return is a command to return from the function, it is not a variable.
 
 // the RETURN Value is NULL 
       
@@ -23,7 +23,7 @@
       
 // This funtion appears to be called Title Content for Route its arguments are ROUTE & NAVIGATOR 
 
-// The scope variable is "return" 
+// The scope variable is "return" ***Return is a command to return from the function, it is not a variable.
 
 // the RETURN Value is TouchableOpacity which should give you Navigator.push,       
       
@@ -38,7 +38,7 @@
  
 // This funtion appears to be called Icon for Route its arguments are ROUTE & NAVIGATOR 
 
-// The scope variable is "return" 
+// The scope variable is "return"  ***Return is a command to return from the function, it is not a variable.
 
 // the RETURN TouchableOpacity which should give you { navigator.popToRoute(route); }} onPress
       
@@ -57,6 +57,6 @@
   
   // This funtion appears to be called Separator for Route its arguments are ROUTE & NAVIGATOR 
 
-// The scope variable is "return" 
+// The scope variable is "return"  ***Return is a command to return from the function, it is not a variable.
 
 // the RETURN Value is TouchableOpacity which should give {navigator.pop} on press and style which should give  {styles.crumbSeparatorPlaceholder}
